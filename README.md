@@ -17,7 +17,15 @@ XR devices ship with the YANG files that define the data models they support. Us
 
 gRPC is an open-source RPC framework. It is based on Protocol Buffers (Protobuf), which is an open source binary serialization protocol. gRPC provides a flexible, efficient, automated mechanism for serializing structured data, like XML, but is smaller and simpler to use. You define the structure using protocol buffer message types in .proto files. Each protocol buffer message is a small logical record of information, containing a series of name-value pairs.
 
-## Getting Started
+### Enable gRPC
+
+SSH in to the Always-On Sandbox IOS XR router and turn on gRPC and disable tls, below is an example configuration
+
+```
+grpc
+ port 57777
+ no-tls 
+```
 
 
 ### Python Environment Setup
@@ -30,15 +38,10 @@ Follow these steps to create and activate a venv.
 virtualenv venv --python=python3.6
 source venv/bin/activate
 ```
-
-### Enable gRPC
-
-SSH in to the Always-On Sandbox IOS XR router and turn on gRPC and disable tls, below is an example configuration
+Install the code requirements
 
 ```
-grpc
- port 57777
- no-tls 
+pip install -r requirements
 ```
 
 ## Code Example "Get Interfaces"
