@@ -41,7 +41,7 @@ source venv/bin/activate
 Install the code requirements
 
 ```
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## Code Example "Get Interfaces"
